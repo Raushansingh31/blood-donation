@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registered Successfully</title>
+    <style>
+        body{
+            background-color: rgb(221, 184, 255);
+        }
+        #group1{
+            background-color: rgb(247, 154, 154);
+            margin: 50px;
+            padding: 50px;
+            border-radius: 6px;
+        }
+        #rstitle{
+            font-size: 40px;
+        }
+        #your{
+            font-size: 25px;
+        }
+        #group2,#group3{
+            padding-top: 20px;
+            font-size: larger;
+        }
+        #group3{
+            padding-bottom: 60px;
+        }
+        #button{
+            margin: 50px;
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+        button:hover{
+            background-color: rgb(132, 255, 132);
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="group1"><span id="rstitle">Registered Successfully as Donor</span> <hr>
+    <span id="your"> Your </span><div id="group2"> Login id =  " <span id="loginid"></span> " </div>
+    <div id="group3"> Password = " <span id="password"></span> " </div>
+    Save for Future Referance
+    <div>
+        <a href="index.html"><button id="button">Home</button></a>
+    </div>
+    </div>
+    <script>
+        document.getElementById("loginid").innerHTML=localStorage.getItem("emailvalue");
+        document.getElementById("password").innerHTML=localStorage.getItem("pwvalue");
+    </script>
+</body>
+</html>

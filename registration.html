@@ -1,0 +1,130 @@
+<html>
+    <head>
+        <title>Registration</title>
+        <link rel="stylesheet" href="registration.css">
+    </head>
+    <body>
+        <div id="group1">
+            <span>
+                <span id="regtitle" align="center"><h1 id="title"><img id="logo" src="logo.png">   Registration</h1></span><hr>
+            </span>
+            <span id="group2">
+                <form action="" id="form1" name="form1">
+                    Name<span id="req">*</span> : <input type="text" required><br/>
+                    Date of Birth<span id="req">*</span> : <input type="date" required><br/>
+                    Gender <span id="req">*</span>: <input type="radio" name="gender" required> Male  <input type="radio" name="gender" required> Female <input type="radio" name="gender" required> Others <br/>
+                    E-mail ( login id ) <span id="req">*</span>: <input id="email1" type="email" name="email" required><br/>
+                    Phone no <span id="req">*</span>: <input type="number" name="phno" required><br/>
+
+
+
+                  <fieldset> <legend> Permanent Address : </legend>
+                    Street <span id="req">*</span>: <input type="text" placeholder="Address" required> 
+                    State <span id="req">*</span>:<select name="statelist" required>
+                        <option value="">--Select--</option>
+                        <option value=”Andaman and Nicobar Islands”>Andaman and Nicobar Islands</option>
+                        <option value=”Andhra Pradesh”>Andhra Pradesh</option>
+                        <option value=”Arunachal Pradesh”>Arunachal Pradesh</option>
+                        <option value=”Assam”>Assam</option>
+                        <option value=”Bihar”>Bihar</option>
+                        <option value=”Chandigarh”>Chandigarh</option>
+                        <option value=”Chhattisgarh”>Chhattisgarh</option>
+                        <option value=”Dadra and Nagar Haveli”>Dadra and Nagar Haveli</option>
+                        <option value=”Daman and Diu”>Daman and Diu</option>
+                        <option value=”Delhi”>Delhi</option>
+                        <option value=”Goa”>Goa</option>
+                        <option value=”Gujarat”>Gujarat</option>
+                        <option value=”Haryana”>Haryana</option>
+                        <option value=”Himachal Pradesh”>Himachal Pradesh</option>
+                        <option value=”Jammu and Kashmir”>Jammu and Kashmir</option>
+                        <option value=”Jharkhand”>Jharkhand</option>
+                        <option value=”Karnataka”>Karnataka</option>
+                        <option value=”Kerala”>Kerala</option>
+                        <option value=”Lakshadweep”>Lakshadweep</option>
+                        <option value=”Madhya Pradesh”>Madhya Pradesh</option>
+                        <option value=”Maharashtra”>Maharashtra</option>
+                        <option value=”Manipur”>Manipur</option>
+                        <option value=”Meghalaya”>Meghalaya</option>
+                        <option value=”Mizoram”>Mizoram</option>
+                        <option value=”Nagaland”>Nagaland</option>
+                        <option value=”Orissa”>Orissa</option>
+                        <option value=”Pondicherry”>Pondicherry</option>
+                        <option value=”Punjab”>Punjab</option>
+                        <option value=”Rajasthan”>Rajasthan</option>
+                        <option value=”Sikkim”>Sikkim</option>
+                        <option value=”Tamil Nadu”>Tamil Nadu</option>
+                        <option value=”Tripura”>Tripura</option>
+                        <option value=”Uttaranchal”>Uttaranchal</option>
+                        <option value=”Uttar Pradesh”>Uttar Pradesh</option>
+                        <option value=”West Bengal”>West Bengal</option>
+                        </select><br>
+                        District<span id="req">*</span> : <input type="text" required>
+                        City<span id="req">*</span> : <input type="text" required>
+                        Pincode<span id="req">*</span> : <input type="number" maxlength="6" required></fieldset><br>
+
+                        Blood Type <span id="req">*</span>: <select required>
+                            <option value="">--Select--</option>
+                            <option >A+</option>
+                            <option >A-</option>
+                            <option >B+</option>
+                            <option >B-</option>
+                            <option >AB+</option>
+                            <option >AB-</option>
+                            <option >O+</option>
+                            <option >O-</option>
+                        </select><br>
+
+                        Have You Donated Blood Before : <input name="hydbb" type="radio" value="Yes">Yes <input name="hydbb" type="radio" value="Yes">No<br>
+                        Do U Have Any Disease <span id="req">*</span>: <input name="duhad" type="radio" value="Yes" required>Yes <input name="duhad" required type="radio" value="Yes">No<br>
+
+                        Create password <span id="req">*</span>: <input type="password" required id="pass1"><br>
+                        Confirm password <span id="req">*</span> : <input type="password" required id="pass2"><br>
+                        <div id="linenm">Password doesn't match</div>
+                        <div id="cnbe">Cant't be empty</div>
+
+
+                        <span><input name="submit" id="rbtn" type="submit" value="Register" onclick="vp()"></span>
+                        <input id="cbtn" type="reset" value="Clear">
+                </form>
+            </span>
+        </div>
+
+
+
+        <script>
+
+
+
+            
+            function vp(){
+
+                var pas1 = document.getElementById("pass1").value;
+                var pas2 = document.getElementById("pass2").value;
+                var line = document.getElementById("linenm");
+                if (pas1!=pas2){
+                line.style.display = 'block';
+                document.getElementById ('rbtn').readOnly = true;
+                document.getElementById ('rbtn').style.opacity="0.5";
+                window.alert("Invalid Details");
+                }
+               else if((pas1!= "" && pas2!="")&&(pas1==pas2)){
+                
+                document.getElementById ('rbtn').readOnly = false;
+                document.getElementById ('rbtn').style.opacity="1";
+                    window.alert("Registered Successfully");
+                   // window.reload();
+
+                   form1.action="rs.html";
+                   var loginid=document.getElementById("email1").value;
+                   var pw=document.getElementById("pass2").value;
+                   localStorage.setItem("emailvalue",loginid);
+                   localStorage.setItem("pwvalue",pw);
+
+
+                }
+            }
+    
+           
+        </script>
+    </body>
+</html>

@@ -1,0 +1,59 @@
+.full
+{
+ font-size:23px;
+}
+body{
+    background-image:url(pexels-johannes-plenio-1103970.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: max-content;
+    font-family: georgia;
+font-weight: bold;
+}
+.whole
+{
+    padding: 70px;
+    padding-left: 120px;
+    padding-top:30px;
+    padding-bottom:30px;
+    margin: 300px;
+    margin-top:20px;
+    margin-bottom: 20px;
+    background-color: rgba(140, 127, 9, 0.289);
+    border-radius: 8px;
+}
+input{
+    border:1px;
+    border-style: double;
+    border-color: black;
+    padding:10px ;
+    margin: 1px solid;
+    font-size: 18px;
+    border-radius: 6px;
+}
+.login
+{
+    margin: 14px;
+    margin-top:40px;
+    font-weight: bolder;
+    margin-left: 40px;
+}
+.details
+{
+    text-align: center;
+    padding: 10px;
+    margin:10px;
+    margin-left: 400px;
+    margin-right: 400px;
+    border:3px;
+    border-style:double;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 6px;
+}
+#edit:hover{
+    background-color: orange;
+}
+#proceed:hover{
+    background-color: rgb(106, 248, 106);
+}

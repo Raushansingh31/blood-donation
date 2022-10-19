@@ -1,0 +1,63 @@
+#linenm,#cnbe{
+    display: none;
+    font-size: x-large;
+    color: rgb(255, 163, 163);
+}
+
+
+#logo{
+    width:100px;
+}
+
+#group1{
+    background-color: rgba(0, 0, 0, 0.493);
+    border-radius: 6px;
+    margin: 50px;
+}
+body{
+    background-image: url("regbg.jpg");
+    background-size: contain;
+    color: antiquewhite;
+}
+#regtitle{
+    padding: 20px;
+    color: antiquewhite;
+    padding-top: 100px;
+    font-family:Arial, Helvetica, sans-serif
+}
+#group2{
+    margin: 10px;
+}
+#form1{
+    margin: 30px;
+    padding: 50px;
+    font-size: 30px;
+}
+input,select{
+    padding: 5px;
+    margin: 20px;
+    border-radius: 4px;
+    border: 1px solid black;
+}
+
+#req{
+    color: red;
+}
+
+fieldset{
+    border-radius: 4px;
+}
+
+#rbtn,#cbtn{
+    padding: 10px;
+    width: 20%;
+    font-size: 20px;
+}
+
+#rbtn:hover {
+    background-color: green;
+}
+#cbtn:hover {
+    background-color: red;
+}
+
